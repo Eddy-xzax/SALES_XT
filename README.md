@@ -10,3 +10,6 @@ sales_xt == Project
  
 This the whole entire project.
 Inside we find the manage.py file, sales(app) etc
+
+Templates and Static files
+These handle  customer login on the browser side.
