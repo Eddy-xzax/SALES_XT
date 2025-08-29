@@ -13,3 +13,6 @@ Inside we find the manage.py file, sales(app) etc
 
 Templates and Static files
 These handle  customer login on the browser side.
+
+Authentication 
+Authentication is handled by django rest framework.

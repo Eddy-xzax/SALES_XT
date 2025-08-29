@@ -6,27 +6,28 @@
     {% load static %}
     <title>Sales XT</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    	</head>
+</head>
 <body>
-<div class ="container">
-<form method="POST" action="/register">
-<h2>Register</h2>
-<label>Username: </label>
-<input type="text" name="username" required>
+<div class="container">
+    <form method="POST" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <h2>Register</h2>
 
-<label>Email: </label>
-<input type="email" name="email" required>
+        <label>Phone number: </label>
+        <input type="text" name="phone_number" required>
 
-<label>Password: </label>
-<input type="password" name="password" required>
+        <label>Email: </label>
+        <input type="email" name="email" required>
 
-<label>Confirm password: </label>
-<input type="password" name="password" required>
+        <label>Password: </label>
+        <input type="password" name="password1" required>
 
-<button type="submit">Sign Up</button>
-<p>Already have an accout? <a href="/login>Login</a></p>
-</form>
+        <label>Confirm password: </label>
+        <input type="password" name="password2" required>
+
+        <button type="submit">Sign Up</button>
+        <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    </form>
 </div>
 </body>
-</html>
-
+</html>   
