@@ -106,11 +106,16 @@ AUTH_PASSWORD_VALIDATORS = [
 #       'rest_framework.authentication.TokenAuthentication',
 #       'rest_framework.authentication.SessionAuthentication',
 #   ],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
+#    'DEFAULT_PERMISSION_CLASSES': [
+#        'rest_framework.permissions.IsAuthenticated',
+#    ]
+#}
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+	'rest_framework.authentication.SessionAuthentication',
+        "rest_framework.authentication.TokenAuthentication",
     ]
 }
-
 AUTH_USER_MODEL = 'sales.CustomUser'
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
