@@ -70,8 +70,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'sales_xt.wsgi.application'
-
-
+LOGIN_REDIRECT_URL = '/Product/' 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
@@ -116,7 +115,7 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.TokenAuthentication",
     ]
 }
-AUTH_USER_MODEL = 'sales.CustomUser'
+AUTH_USER_MODEL = "sales.CustomUser"
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
